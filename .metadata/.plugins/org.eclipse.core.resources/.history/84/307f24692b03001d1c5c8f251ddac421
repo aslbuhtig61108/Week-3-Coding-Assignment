@@ -1,0 +1,33 @@
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		// 1. Create an array of data type int called ages that contains the provided values
+		int[] ages = new int[7];
+		ages[0] = 3;
+		ages[1] = 9;
+		ages[2] = 23;
+		ages[3] = 64;
+		ages[4] = 2;
+		ages[5] = 8;
+		ages[6] = 28;
+		
+		// Subtract the value of the first element of the array from the last element
+		int diffLastFirst = 0;
+		diffLastFirst = ages[6] - ages[0];
+		System.out.println(diffLastFirst);
+		
+		
+		
+		// 2. Create an array of String called names that contain the provided values
+		String[] names = new String[6];
+		
+		int i = 0;
+		do {
+			System.out.println(names.length[i]);
+			i++;
+		} while (i < names.length);
+				
+	}
+
+}

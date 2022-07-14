@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\nilat\Desktop\Promineo\Week3\Coding\.metadata\.plugins\org.eclipse.jdt.core
+311620981.index
+766801462.index
+1865797976.index

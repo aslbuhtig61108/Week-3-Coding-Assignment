@@ -1,0 +1,25 @@
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		// Create an array of data type int that contains the provided values
+		int[] ages = new int[7];
+		ages[0] = 3;
+		ages[1] = 9;
+		ages[2] = 23;
+		ages[3] = 64;
+		ages[4] = 2;
+		ages[5] = 8;
+		ages[6] = 28;
+		
+		// Subtract the value of the first element of the array from the last
+		int diffLastFirst = 0;
+		diffLastFirst = age[6] - age[0];
+		System.out.println(diffLastFirst);
+		
+		
+		
+
+	}
+
+}

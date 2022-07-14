@@ -1,0 +1,18 @@
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		// Create an array of data type int that contains the provided values
+		int[] ages = new int[7];
+		
+		// Subtract the value of the first element of the array from the last
+		int diffLastFirst = 0;
+		diffLastFirst = int[6] - int[0];
+		System.out.println(diffLastFirst);
+		
+		
+		
+
+	}
+
+}
