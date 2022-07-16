@@ -73,11 +73,7 @@ public class Main1 {
 		System.out.println("Item 6) The sum of all elements is : " + sumOfNameLengths);
 		
 		// Item #7.
-		System.out.println("Item 7) output is: " + multiplyMe ("John", 5));
-		
-		// Item #8.
-		String output = bringNamesTogether ("Lani", "Mercado");
-		System.out.println("Item 8) output is : " + output);
+		System.out.println(multiplyMe ("John", 5));
 		
 		
 		
@@ -87,21 +83,12 @@ public class Main1 {
 
 	// Method for item#7
 	public static String multiplyMe (String word, int n) {
-		String result = " ";
+		word = " ";
 		for (int j = 0; j < n; j++) {
-			result += word; 
+			word++; 
 		}
-		return result;
+		return word;
 	}
-	
-	// Method for item#8
-	public static String bringNamesTogether (String x, String y) {
-		String fullName = x + " " + y;
-		return fullName;	
-		
-	}
-	
-	
 	
 	
 	

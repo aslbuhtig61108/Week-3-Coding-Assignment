@@ -76,8 +76,8 @@ public class Main1 {
 		System.out.println("Item 7) output is: " + multiplyMe ("John", 5));
 		
 		// Item #8.
-		String output = bringNamesTogether ("Lani", "Mercado");
-		System.out.println("Item 8) output is : " + output);
+		String output = bringNamesTogether (String firstName, String lastName);
+		System.out.println(output);
 		
 		
 		
