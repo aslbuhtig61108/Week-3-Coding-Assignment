@@ -79,8 +79,31 @@ public class Main1 {
 		String output = bringNamesTogether ("Lani", "Mercado");
 		System.out.println("Item 8) output is : " + output);
 		
+		// Item #9.
+		int[] numbers = {5, 18, 9, 52, 27, 5};
+		System.out.println("Item 9) output is : " + isSumMoreThan100 (numbers));
 		
+		// Item #10.
+		double[] quizScores = {12.43, 54.32, 87.21, 33.24, 98.11, 17.90, 7.16};
+		double finalAnswer = getAverage(quizScores);
+		System.out.println("Item 10) output is : " + finalAnswer);
 		
+		// Item #11.
+		double[] quizScores1 = {12.43, 17.32, 20.00, 14.21, 9.24, 13.11}; 
+		double[] quizScores2 = {9.00, 11.90, 15.14,  17.90, 7.16, 18.99};
+		
+		boolean outcome = compareAvgQuizScores(quizScores1, quizScores2);
+		System.out.println("Item 11) output is : " + outcome);
+				
+		// Item #12.
+		boolean isHotOutside = true;
+		double moneyInPocket = 14.79;
+		
+		boolean decision = willBuyDrink (isHotOutside, moneyInPocket);
+		System.out.println("Item 12) output is : " + decision);
+		
+		// Item #13.
+
 		
 		
 	}
@@ -98,12 +121,73 @@ public class Main1 {
 	public static String bringNamesTogether (String x, String y) {
 		String fullName = x + " " + y;
 		return fullName;	
+	}
+	
+	// Method for item#9
+	public static boolean isSumMoreThan100 (int[] numbers) {
+		int result = 0;
+		for (int numero : numbers) {
+			result += numero;
+		}
+	if (result > 100) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	// Method for item#10
+	public static double getAverage (double[] all) {
+		double sum = 0.0;
+		double average = 0.0;
+		for (double y : all) {
+			sum += y; 
+		}
+		average = sum/all.length;
+		return average;
+	}
+	
+	// Method for item#11
+	public static boolean compareAvgQuizScores(double[] s1, double[] s2) {
+		double sum1 = 0.0;
+		double sum2 = 0.0;
+		double average1 = 0.00;
+		double average2 = 0.00;
+		
+		for (double s : s1) {
+			sum1 += s;
+		}
+		average1 = sum1 / s1.length;
+		
+		for (double t : s2) {
+			sum2 += t;
+		}
+		average2 = sum2 / s2.length;
+		
+		if (average1 > average2) {
+			return true;
+		} else {
+			return false;
+		}
 		
 	}
 	
+	// Method for item#12
+	public static boolean willBuyDrink (boolean ans, double myCash) {
+		if (ans == true && myCash > 10.50) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
-	
+	// Method for item#13
 	
 	
 	
 }
+	
+	
+	
+	
+
