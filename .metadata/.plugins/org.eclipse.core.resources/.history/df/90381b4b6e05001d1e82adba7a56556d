@@ -10,20 +10,20 @@ public class Main1 {
 		// System.out.println(" a) Subtract the value of the first element of the array from the last element");
 		int diffLastFirst = 0;
 		diffLastFirst = ages[6] - ages[0];
-		System.out.println("a) The difference is : " + diffLastFirst);
+		System.out.println("The difference is : " + diffLastFirst);
 				
 		// System.out.println(" b) Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths");
 		int[] ages1 = {3, 9, 23, 64, 2, 8, 28, 72};
 		int diffLastFirst1 = 0;
 		diffLastFirst1 = ages1[ages1.length-1] - ages1[0];
-		System.out.println("b) Adding a random age, results in: " + diffLastFirst1);
+		System.out.println("Adding a random age, results in: " + diffLastFirst1);
 		
 		// System.out.println(" c) Use a loop to iterate through the array and calculate the average age. Print the result to the console");
 		int result1 = 0;
 		for (int age : ages1) {
 			result1 += age;
 		}
-		System.out.println("c) The average age is : " + result1/ages1.length);
+		System.out.println("The average age is : " + result1/ages1.length);
 		
 				
 		System.out.println("2. Create an array of String called names that contain the provided values.");
@@ -45,7 +45,7 @@ public class Main1 {
 		} while (j < names.length);
 		
 		// System.out.println("a) Use a loop to iterate through the array calculating the average number of letters per name.");
-		System.out.println("a) The average number of letters per name is : " + sumOfLettersPerName/names.length);
+		System.out.println("The average number of letters per name is : " + sumOfLettersPerName/names.length);
 		System.out.println("The answer is a whole number becuase we cannot fairly demonstrate a portion of a letter.");
 		
 		// System.out.println("Use a loop to iterate through the array again and concatenate all the names together");
@@ -105,42 +105,47 @@ public class Main1 {
 		System.out.println("Item 12) output is : " + decision);
 		
 		// Item #13.
-		System.out.println("Item 13) : My Method");
+		System.out.println("Item 13 : My Method");
 		// My method will calculate the area of a triangle or circle from user-provided input and returns the area accordingly.
- 		// Initiate the user's choice as an integer. Their decision is evaluated accordingly using the simple IF conditional statement.
- 
-		// Using the menu app video as a form of reference, I placed the intro and user prompts in a method called startProgramGetSelection, 
-		// which returns the user's pick and is assigned to int choice
+		 
+		
 		int choice = startProgramGetSelection();
 		String resultSqunit = " ";
 		
-		// The user's selection is captured and filters through the IF loop 
-		// I chose to use two method's to calculate the areas of a triangle and rectangle, respectively, with an exit option  
+		
 			if (choice == 1) {
-				System.out.print("Please enter the triangle's height : ");
+				System.out.print("Please enter the HEIGHT now : ");
 				double height = keyboard.nextDouble();
-				System.out.print("Please enter the triangle's base : ");
+				System.out.print("Please enter the BASE now : ");
 				double base = keyboard.nextDouble();
-
-		// The triangle area calculation method is invoked here when the user enters '1'
+		
 				double computedAreaOfTriangle = solveAreaOfTriangle (height, base);
 				System.out.print("Therefore, the area of this triangle is : " + computedAreaOfTriangle + " square feet");
 				
 			} else if (choice == 2) {
-				System.out.print("Please enter the rectangle's length now : ");
+				System.out.print("Please enter the LENGTH now : ");
 				double length = keyboard.nextDouble();
-				System.out.print("Please enter the rectangle's width now : ");
+				System.out.print("Please enter the WIDTH now : ");
 				double width = keyboard.nextDouble();
 
-		// The rectangle area calculation method is invoked here when the user enters '2'		
 				double computedAreaOfRectangle = solveAreaOfRectangle (length, width);
 				System.out.print("Therefore, the area of this rectangle is : " + computedAreaOfRectangle + " square feet");
-			
-		// To exit the program, I've included an exit option with a simple greeting		
-		   } else {
+				
+			} else {
 				 System.out.println("Have a good day!");
 	
+				 
+				 
+		
+		
+
+			
+		
+		
 		}
+		
+			
+		
 		
 	}
 
@@ -219,7 +224,6 @@ public class Main1 {
 	
 	// Method for item#13
 	
-	// My attempts to follow a top down method threw me into a confusion, but I managed in the first third of my program.
 	public static int startProgramGetSelection() {
 		System.out.println("To solve the area of a triangle or rectangle, the appropriate dimensions are required.");
 		System.out.print("Please choose the option : 1) Triangle 2) Rectangle or 3) To Exit : ");
@@ -227,13 +231,11 @@ public class Main1 {
 		return systemChoice;				
 	}
 	
-	// Area of triangle is computed by obtaining the product between the height and base dividing the product by 2.
 	public static double solveAreaOfTriangle (double xheight, double ybase) {
 		double areaOfTriangle = (0.5 * xheight * ybase);
 		return areaOfTriangle;
 	}
-	
-	// Area of rectangle is computed by obtaining the product between the length and width (or base).
+
 	public static double solveAreaOfRectangle (double xlength, double ywidth) {
 		double areaOfTriangle = (xlength * ywidth);
 		return areaOfTriangle;

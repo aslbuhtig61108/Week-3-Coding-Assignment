@@ -107,22 +107,18 @@ public class Main1 {
 		// Item #13.
 		System.out.println("Item 13) : My Method");
 		// My method will calculate the area of a triangle or circle from user-provided input and returns the area accordingly.
- 		// Initiate the user's choice as an integer. Their decision is evaluated accordingly using the simple IF conditional statement.
- 
-		// Using the menu app video as a form of reference, I placed the intro and user prompts in a method called startProgramGetSelection, 
-		// which returns the user's pick and is assigned to int choice
+		 
+		
 		int choice = startProgramGetSelection();
 		String resultSqunit = " ";
 		
-		// The user's selection is captured and filters through the IF loop 
-		// I chose to use two method's to calculate the areas of a triangle and rectangle, respectively, with an exit option  
+		
 			if (choice == 1) {
 				System.out.print("Please enter the triangle's height : ");
 				double height = keyboard.nextDouble();
 				System.out.print("Please enter the triangle's base : ");
 				double base = keyboard.nextDouble();
-
-		// The triangle area calculation method is invoked here when the user enters '1'
+		
 				double computedAreaOfTriangle = solveAreaOfTriangle (height, base);
 				System.out.print("Therefore, the area of this triangle is : " + computedAreaOfTriangle + " square feet");
 				
@@ -132,15 +128,24 @@ public class Main1 {
 				System.out.print("Please enter the rectangle's width now : ");
 				double width = keyboard.nextDouble();
 
-		// The rectangle area calculation method is invoked here when the user enters '2'		
 				double computedAreaOfRectangle = solveAreaOfRectangle (length, width);
 				System.out.print("Therefore, the area of this rectangle is : " + computedAreaOfRectangle + " square feet");
-			
-		// To exit the program, I've included an exit option with a simple greeting		
-		   } else {
+				
+			} else {
 				 System.out.println("Have a good day!");
 	
+				 
+				 
+		
+		
+
+			
+		
+		
 		}
+		
+			
+		
 		
 	}
 
@@ -219,7 +224,6 @@ public class Main1 {
 	
 	// Method for item#13
 	
-	// My attempts to follow a top down method threw me into a confusion, but I managed in the first third of my program.
 	public static int startProgramGetSelection() {
 		System.out.println("To solve the area of a triangle or rectangle, the appropriate dimensions are required.");
 		System.out.print("Please choose the option : 1) Triangle 2) Rectangle or 3) To Exit : ");
@@ -227,13 +231,11 @@ public class Main1 {
 		return systemChoice;				
 	}
 	
-	// Area of triangle is computed by obtaining the product between the height and base dividing the product by 2.
 	public static double solveAreaOfTriangle (double xheight, double ybase) {
 		double areaOfTriangle = (0.5 * xheight * ybase);
 		return areaOfTriangle;
 	}
-	
-	// Area of rectangle is computed by obtaining the product between the length and width (or base).
+
 	public static double solveAreaOfRectangle (double xlength, double ywidth) {
 		double areaOfTriangle = (xlength * ywidth);
 		return areaOfTriangle;
