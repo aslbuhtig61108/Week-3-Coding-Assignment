@@ -1,6 +1,8 @@
+import java.util.Scanner;
 
 public class Main1 {
-
+	static Scanner keyboard = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		System.out.println("1. Create an array of data type int called ages that contains the provided values");
 		int[] ages = {3, 9, 23, 64, 2, 8, 28};
@@ -103,7 +105,45 @@ public class Main1 {
 		System.out.println("Item 12) output is : " + decision);
 		
 		// Item #13.
+		System.out.println("Item 13 : My Method");
+		// My method will calculate the area of a triangle or circle from user-provided input and returns the area accordingly.
+		 
+		
+		int choice = startProgramGetSelection();
+		String resultSqunit = " ";
+		
+			if (choice == 1) {
+				System.out.print("Please enter the HEIGHT now : ");
+				double height = keyboard.nextDouble();
+				System.out.print("Please enter the BASE now : ");
+				double base = keyboard.nextDouble();
+		
+				double computedAreaOfTriangle = solveAreaOfTriangle (height, base);
+				System.out.print("Therefore, the area of this triangle is : " + computedAreaOfTriangle + " square feet");
+				
+			} else if (choice == 2) {
+				System.out.print("Please enter the LENGTH now : ");
+				double length = keyboard.nextDouble();
+				System.out.print("Please enter the WIDTH now : ");
+				double width = keyboard.nextDouble();
 
+				double computedAreaOfRectangle = solveAreaOfRectangle (length, width);
+				System.out.print("Therefore, the area of this rectangle is : " + computedAreaOfRectangle + " square feet");
+				
+			} else {
+				 System.out.println("Have a good day!");
+	
+				 
+				 
+		
+		
+
+			
+		
+		
+		}
+		
+			
 		
 		
 	}
@@ -183,7 +223,23 @@ public class Main1 {
 	
 	// Method for item#13
 	
+	public static int startProgramGetSelection() {
+		System.out.println("To solve the area of a triangle or rectangle, the appropriate dimensions are required.");
+		System.out.print("Please choose the option : 1) Triangle 2) Rectangle or 3) To Exit : ");
+		int systemChoice = keyboard.nextInt();
+		return systemChoice;				
+	}
 	
+	public static double solveAreaOfTriangle (double xheight, double ybase) {
+		double areaOfTriangle = (0.5 * xheight * ybase);
+		return areaOfTriangle;
+	}
+
+	public static double solveAreaOfRectangle (double xlength, double ywidth) {
+		double areaOfTriangle = (xlength * ywidth);
+		return areaOfTriangle;
+	}
+
 	
 }
 	
